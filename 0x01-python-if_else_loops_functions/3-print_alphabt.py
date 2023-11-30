@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for letters in range(97, 123):
-    if letters in [101, 113]:
+for l in range(97, 123):
+    if l in [101, 113]:
         continue
-    print("{}". format(chr(letters)), end="")
+    print("{}". format(chr(l)), end="")
