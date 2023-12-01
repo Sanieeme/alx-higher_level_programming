@@ -1,2 +1,4 @@
-#!/usr/bin/python
-if __name__ == "__main__
+#!/usr/bin/python3
+import string
+n = string.ascii_uppercase
+print("{}".format(n))
