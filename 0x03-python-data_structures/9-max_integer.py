@@ -4,4 +4,4 @@ def max_integer(my_list=[]):
     for n in my_list:
         if n > large:
             large = n
-    return(large)
+    return (large)
