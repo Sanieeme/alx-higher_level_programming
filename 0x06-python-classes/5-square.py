@@ -41,6 +41,6 @@ class Square:
         for num in range(0, self.__size):
             for nums in range(0, self.__size):
                 print("#", end="")
-            print(" ")
+            print("")
         if self.__size == 0:
             print("")
