@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """defining class."""
 
+
 class Square:
     """defines Square."""
-    
+
     def __init__(self, size=0):
 
         """constructor.
