@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 def safe_print_division(a, b):
-    nums = 0
     """divides 2 integers and prints results
 
     Args:
@@ -11,6 +10,7 @@ def safe_print_division(a, b):
     Returns:
         results
     """
+    nums = 0
     try:
         nums = a / b
     except ZeroDivisionError:
