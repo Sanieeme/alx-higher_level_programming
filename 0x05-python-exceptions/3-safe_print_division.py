@@ -3,14 +3,9 @@
 def safe_print_division(a, b):
     """divides 2 integers and prints results
 
-    Args:
-        a: integer
-        b: integer
-
     Returns:
-        results
+        num
     """
-    nums = 0
     try:
         nums = a / b
     except ZeroDivisionError:
