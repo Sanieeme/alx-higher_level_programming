@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """defines class"""
-from models.Base import Base
+from models.base import Base
 
 
 
