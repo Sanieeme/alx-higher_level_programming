@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines class"""
+"""defines module for base class """
 
 
 
