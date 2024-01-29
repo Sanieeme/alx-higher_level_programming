@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """represents triangle"""
     if n <= 0:
-        return[]
+        return []
 
     triangles = [[1]]
     while len(triangles) != n:
