@@ -9,7 +9,7 @@ def pascal_triangle(n):
 
     triangles = [[1]]
     while len(triangles) != n:
-        t =  triangles[-1]
+        t = triangles[-1]
         t1 = [1]
         for j in range(len(t) - 1):
             t1.append(t[j] + t[j + 1])
