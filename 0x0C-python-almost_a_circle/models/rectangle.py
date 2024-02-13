@@ -2,7 +2,6 @@
 """defines class"""
 from models.base import Base
 
-
 class Rectangle(Base):
     """represents class"""
 
@@ -20,10 +19,18 @@ class Rectangle(Base):
 
         @width.setter
         def width(self, value):
+<<<<<<< HEAD
+
+            if type(value) != int:
+                raise TypeError("width must be an interger")
+            if value <= 0:
+                raise ValueError("width must be > 0")
+=======
             if type(value) != int:
                 raise TypeError("width must be an integer")
             if value <= 0:
                 raise TypeError("width must be > 0")
+>>>>>>> 46ec3a4ea01742e460c27701b5752f70c8fd63c6
             self.__width = value
 
         @property
@@ -32,10 +39,18 @@ class Rectangle(Base):
 
         @height.setter
         def height(self, value):
+<<<<<<< HEAD
+
+            if type(value) != int:
+                raise TypeError("height must be an interger")
+            if value <= 0:
+                raise ValueError("height must be > 0")
+=======
             if type(value) != int:
                 raise TypeError("height must be an integer")
             if value <= 0:
                 raise TypeError("height must be > 0")
+>>>>>>> 46ec3a4ea01742e460c27701b5752f70c8fd63c6
             self.__height = value
 
         @property
@@ -44,18 +59,69 @@ class Rectangle(Base):
 
         @x.setter
         def x(self, value):
+<<<<<<< HEAD
+
+            if type(value) != int:
+                raise TypeError("x must be an interger")
+            if value < 0:
+                raise ValueError("x must be >= 0")
+=======
             if type(value) != int:
                 raise TypeError("x must be an integer")
             if value < 0:
                 raise TypeError("x must be >= 0")
+>>>>>>> 46ec3a4ea01742e460c27701b5752f70c8fd63c6
             self.__x = value
 
         @property
         def y(self):
+
             return (self.__y)
 
         @y.setter
         def y(self, value):
+<<<<<<< HEAD
+
+            if type(value) != int:
+                raise TypeError("y must be an interger")
+            if value < 0:
+                raise ValueError("y must be >= 0")
+            self.__y = value
+
+        def area(self):
+
+            return (self.width * self.height)
+
+        def display(self):
+
+            if width == 0 or height == 0:
+                return ()
+            for n in range self.width:
+                print("#")
+            for num in range self.height:
+                print("#")
+
+        def __str__(self):
+            return ("[Rectangle] {} {}/{} - {}/{}".format(self.id, self.x,
+                    self.y, self.width, self.height))
+
+        def update(self, *args):
+            if id is not None:
+                self.id = id
+            if width is not None:
+                self.width = width
+            if x is not None:
+                self.x = x
+            if y is not None:
+                self.y = y
+
+        def update(self, *args, **kwargs):
+            if args:
+                self.__update(args)
+            elif kwargs:
+                self.__update(kwargs)
+
+=======
             if type(value) != int:
                 raise TypeError("y must be an integer")
             if value < 0:
@@ -134,3 +200,4 @@ class Rectangle(Base):
                         "x": self.x,
                         "y": self.y
                         }
+>>>>>>> 46ec3a4ea01742e460c27701b5752f70c8fd63c6
