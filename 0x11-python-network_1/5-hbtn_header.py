@@ -10,11 +10,14 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 url = sys.argv[1]
-
-response = requests.get(url)
+try:
+    response = requests.get(url)
 
 # Check if X-Request-Id is present in the response headers
-if 'X-Request-Id' in response.headers:
-    print(response.headers['X-Request-Id'])
-else:
-    print("X-Request-Id not found in the response headers.")
+    if 'X-Request-Id' in response.headers:
+        print(response.headers['X-Request-Id'])
+    else:
+        print("X-Request-Id not found in the response headers.")
+
+except requests.RequestException as e:
+    print("Error:", e)
