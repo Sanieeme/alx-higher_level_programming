@@ -19,5 +19,4 @@ try:
     print(response.text)
 
 except requests.RequestException as e:
-        print("Error:", e)
-
+    print("Error:", e)
