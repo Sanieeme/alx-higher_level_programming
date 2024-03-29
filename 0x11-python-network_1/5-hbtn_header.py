@@ -12,6 +12,7 @@ if len(sys.argv) < 2:
 url = sys.argv[1]
 try:
     response = requests.get(url)
+    response.raise_for_status()
 
 # Check if X-Request-Id is present in the response headers
     if 'X-Request-Id' in response.headers:
