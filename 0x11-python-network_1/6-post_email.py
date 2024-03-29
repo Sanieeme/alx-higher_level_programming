@@ -6,10 +6,18 @@
 import requests
 import sys
 
+if len(sys.argv) < 3:
+    print("Usage: python script_name.py <URL> <email>")
+    sys.exit(1)
+
 url = sys.argv[1]
 email = sys.argv[2]
 
-response = requests.post(url, data={'email': email})
+try:
+    response = requests.post(url, data={'email': email})
+    response.raise_for_status()
+    print(response.text)
 
-print(response.text)
+except requests.RequestException as e:
+        print("Error:", e)
 
