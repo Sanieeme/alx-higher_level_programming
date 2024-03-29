@@ -5,10 +5,11 @@ import sys
 url = 'http://0.0.0.0:5000/search_user'
 
 if len(sys.argv) > 1:
-    l = sys.argv[1]
+    lr = sys.argv[1]
 else:
-    l = ""
-response = requests.post(url, data={'q': l})
+    lr = ""
+
+response = requests.post(url, data={'q': lr})
 
 try:
     json_response = response.json()
