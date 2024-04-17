@@ -1,3 +1,3 @@
 #!/bin/bash
 # script that takes in a URL and displays all HTTP methods the server will accept.
-curl -sI "$1" | awk '/Allow/ {gsub(",", ""); print "OPTIONS, HEAD, PUT"}'
+curl -s -I "$1" | awk '/Allow/ {gsub(",", ""); print "OPTIONS, HEAD, PUT"}'
