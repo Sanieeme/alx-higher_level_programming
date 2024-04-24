@@ -13,7 +13,6 @@ request({
   if (!error && response.statusCode === 200) {
     const movieData = JSON.parse(body);
 
-
     const characters = movieData.characters;
 
     const getCharacterData = (characterUrl) => {
@@ -22,7 +21,7 @@ request({
           url: characterUrl,
           method: 'GET',
           strictSSL: false
-	}, function (charError, charResponse, charBody) {
+        }, function (charError, charResponse, charBody) {
           if (!charError && charResponse.statusCode === 200) {
             const characterData = JSON.parse(charBody);
             resolve(characterData);
